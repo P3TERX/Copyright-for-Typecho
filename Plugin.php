@@ -53,7 +53,7 @@ class Copyright_Plugin implements Typecho_Plugin_Interface {
         echo '<hr />';
         $author = new Typecho_Widget_Helper_Form_Element_Text('author', NULL, _t('作者名称'), _t('作者'));
         $form->addInput($author);
-        $notice = new Typecho_Widget_Helper_Form_Element_Text('notice', NULL, _t('转载时须注明出处及本声明'), _t('声明'));
+        $notice = new Typecho_Widget_Helper_Form_Element_Text('notice', NULL, _t('本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！'), _t('声明'));
         $form->addInput($notice);
         $showURL = new Typecho_Widget_Helper_Form_Element_Checkbox('showURL', array(1 => _t('显示原（本）文链接')), NULL, NULL, NULL);
         $form->addInput($showURL);
@@ -146,19 +146,19 @@ class Copyright_Plugin implements Typecho_Plugin_Interface {
         $t_url = '';
         if ($cr['is_enable']) {
             if ($cr['author']) {
-                $t_author = '<p class="content-copyright">版权属于：' . $cr['author'] . '</p>';
+                $t_author = '<p class="content-copyright"><strong>本文作者：</strong>' . $cr['author'] . '</p>';
             }
             if ($cr['url']) {
                 if ($cr['is_original']) {
-                    $t_url = '<p class="content-copyright">本文链接：<a class="content-copyright" href="' . $cr['url'] . '">' . $cr['url'] . '</a></p>';
+                    $t_url = '<p class="content-copyright"><strong>本文链接：</strong><a class="content-copyright" href="' . $cr['url'] . '">' . $cr['url'] . '</a></p>';
                 } else {
-                    $t_url = '<p class="content-copyright">原文链接：<a class="content-copyright" target="_blank" href="' . $cr['url'] . '">' . $cr['url'] . '</a></p>';
+                    $t_url = '<p class="content-copyright"><strong>原文链接：</strong><a class="content-copyright" target="_blank" href="' . $cr['url'] . '">' . $cr['url'] . '</a></p>';
                 }
             }
             if ($cr['notice']) {
-                $t_notice = '<p class="content-copyright">' . $cr['notice'] . '</p>';
+                $t_notice = '<p class="content-copyright"><strong>版权声明：</strong>' . $cr['notice'] . '</p>';
             }
-            $copyright_html = '<hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal">' . $t_author . $t_url . $t_notice . '</blockquote>';
+            $copyright_html = '<blockquote class="content-copyright" style="font-style:normal">' . $t_author . $t_url . $t_notice . '</blockquote>';
         }
         return $copyright_html;
     }
