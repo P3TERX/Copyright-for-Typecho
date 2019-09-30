@@ -1,10 +1,12 @@
-# Copyright for Typecho Theme AriaX
+# Copyright for Typecho-Theme-AriaX
 
 [Copyright for Typecho](https://github.com/Yves-X/Copyright-for-Typecho) 自用~~魔改~~版
 
 - 适配 Typecho-Theme-Aria(X) 主题，使其展示方式更美观。
 
 - 修改格式，添加末尾 CC BY-NC-SA 4.0 协议为默认版权声明
+
+---
 
 # Copyright for Typecho
 
