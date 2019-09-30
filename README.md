@@ -1,3 +1,11 @@
+# Copyright for Typecho Theme AriaX
+
+[Copyright for Typecho](https://github.com/Yves-X/Copyright-for-Typecho) 自用~~魔改~~版
+
+- 适配 Typecho-Theme-Aria(X) 主题，使其展示方式更美观。
+
+- 修改格式，添加末尾 CC BY-NC-SA 4.0 协议为默认版权声明
+
 # Copyright for Typecho
 
 这是一个 [Typecho](https://github.com/typecho/typecho) 插件，利用自定义字段功能灵活地在文章或独立页面尾部显示版权小尾巴。
@@ -5,9 +13,9 @@
 就像这样：
 
 > 版权属于：Yves X
->
+> 
 > 原文链接： https://github.com/Yves-X/Copyright-for-Typecho
->
+> 
 > 转载时须注明出处及本声明
 
 作者曾有很长一段时间没有维护此插件，这期间它随 Typecho 1.1 更新而失效。感谢[神代綺凜](https://github.com/YKilin)修复了此插件，使得它可以在 Typecho 1.1 下继续工作。
@@ -15,9 +23,9 @@
 ## 安装
 
 1. 下载插件
-1. 打开 Typecho 根目录
-1. 解压至 ./usr/plugins/
-1. **将目录重命名为`Copyright`**（请确保插件目录名与插件名一致，感谢 [tanluxiami](https://github.com/tanluxiami) 的反馈。）
+2. 打开 Typecho 根目录
+3. 解压至 ./usr/plugins/
+4. **将目录重命名为`Copyright`**（请确保插件目录名与插件名一致，感谢 [tanluxiami](https://github.com/tanluxiami) 的反馈。）
 
 You can also:
 
@@ -40,12 +48,12 @@ mv Copyright-for-Typecho Copyright
 
 你可以使用的字段有：
 
-| 字段 |类型|说明|示例|
-|:---:|:---:|:----|:----|
-|switch|整数|版权信息的开关|1|
-|author|字符|版权作者姓名|Yves X|
-|url|字符|原（本）文链接*|https://github.com/Yves-X/Copyright-for-Typecho|
-|notice|字符|版权声明|转载时须注明出处及本声明|
+| 字段     | 类型  | 说明       | 示例                                              |
+|:------:|:---:|:-------- |:----------------------------------------------- |
+| switch | 整数  | 版权信息的开关  | 1                                               |
+| author | 字符  | 版权作者姓名   | Yves X                                          |
+| url    | 字符  | 原（本）文链接* | https://github.com/Yves-X/Copyright-for-Typecho |
+| notice | 字符  | 版权声明     | 转载时须注明出处及本声明                                    |
 
 你可以把任意字段的值设定为**整数0**来关闭它。
 
@@ -74,21 +82,21 @@ mv Copyright-for-Typecho Copyright
 现在你要对某篇特定的文章显示版权信息，有以下要求：
 
 1. 不显示作者
-1. 显示原文链接
-1. 声明为“禁止转载”
+2. 显示原文链接
+3. 声明为“禁止转载”
 
 你只需用自定义字段功能，将于全局设置不符的选项覆盖。在此处，你只需填写三条字段：
 
-| 字段 |类型|值|
-|:---:|:---:|:----:|
-|switch|整数|1|
-|author|整数|0|
-|notice|字符|禁止转载|
+| 字段     | 类型  | 值    |
+|:------:|:---:|:----:|
+| switch | 整数  | 1    |
+| author | 整数  | 0    |
+| notice | 字符  | 禁止转载 |
 
 显示效果为：
 
 > 原文链接：https://github.com/Yves-X/Copyright-for-Typecho
->
+> 
 > 禁止转载
 
 ## 其他

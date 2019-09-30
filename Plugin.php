@@ -53,7 +53,7 @@ class Copyright_Plugin implements Typecho_Plugin_Interface {
         echo '<hr />';
         $author = new Typecho_Widget_Helper_Form_Element_Text('author', NULL, _t('作者名称'), _t('作者'));
         $form->addInput($author);
-        $notice = new Typecho_Widget_Helper_Form_Element_Text('notice', NULL, _t('本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！'), _t('声明'));
+        $notice = new Typecho_Widget_Helper_Form_Element_Text('notice', NULL, _t('本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。非商业转载及引用请注明出处（作者、原文链接），商业转载请联系作者获得授权。'), _t('声明'));
         $form->addInput($notice);
         $showURL = new Typecho_Widget_Helper_Form_Element_Checkbox('showURL', array(1 => _t('显示原（本）文链接')), NULL, NULL, NULL);
         $form->addInput($showURL);
